@@ -11,6 +11,7 @@ RUN apt-get update -y && \
     apt-get install -y curl jq && \
     apt-get clean && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+RUN chmod a+rwx /opt/bitnami/nginx/html
 
 ENV APP_VERSION="1.29.0" \
     BITNAMI_APP_NAME="nginx" \
